@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import hamburger from "./hamburger.jpg";
-import { Link } from "react-router-dom";
+
+/* -----STATES----- 
+I used localStorage for user can see the state of the selected books when user reloading the page */
 
 function App() {
   let [books, setBooks] = useState([]);
@@ -20,6 +21,10 @@ function App() {
       });
   }, []);
 
+  /* -----FUNCTIONS-----
+  I made this function to display last two books that user chose from the JSON array in the 'Featured' books column. 
+  I made a selection user has made and when user click the book, it is added in a class of is-selected.
+   */
   const clickbook = (book) => () => {
     const isSelected = features.find((a) => {
       return a.id === book.id;
@@ -34,6 +39,8 @@ function App() {
       setFeatures((s) => [book, s[0]]);
     }
   };
+
+  // -----RENDER-----
 
   return (
     <>
@@ -68,6 +75,7 @@ function App() {
     </>
   );
 }
+// -----components----- //
 
 function Socialmedia() {
   return (
@@ -121,6 +129,8 @@ function MobileHamburger() {
     </>
   );
 }
+
+// I made this function to display last two books that user chose from the JSON array in the 'Featured' books column. //
 function FeturedCard({ books, clickbook, features }) {
   return (
     <div className="feturedcard">
@@ -155,7 +165,7 @@ function FeturedCard({ books, clickbook, features }) {
     </div>
   );
 }
-
+// if user select book a second time, then the book will be removed the class //
 function Card({ books, clickbook, features }) {
   return (
     <div className="all">
