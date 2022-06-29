@@ -1,5 +1,23 @@
+* {
+  margin: 1;
+  padding: 1;
+  line-height: 1;
+  border-radius: 5px;
+}
+
+h1 {
+  margin-top: 0px;
+  padding: 30px;
+}
+.title2 {
+  font-size: 50px;
+  background-color: yellowgreen;
+  margin: 30px;
+  margin-bottom: 40px;
+}
 .App {
   text-align: center;
+  background-color: whitesmoke;
 }
 
 .cardPages {
@@ -181,10 +199,9 @@ li {
   border: 1px solid black;
   margin: 20px;
   padding: 15px;
+  background-color: white;
 }
-.null {
-  background-color: #61dafb;
-}
+
 .is-selected {
   border: 5px solid skyblue;
 }
@@ -202,10 +219,11 @@ li {
 
 .feturedcard {
   border: 1px solid black;
-  height: 1340px;
+  height: 1200px;
   margin-right: 20px;
   margin-left: 20px;
   overflow: hidden;
+  background-color: antiquewhite;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -257,6 +275,7 @@ li {
     height: 40px;
     margin-bottom: 1px;
     font-size: 1;
+    grid-area: bar;
   }
   .title {
     grid-area: top;
