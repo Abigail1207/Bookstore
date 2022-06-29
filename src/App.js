@@ -42,7 +42,11 @@ function App() {
         src="https://upload.wikimedia.org/wikipedia/commons/4/41/Kyobo_Logo.svg"
         alt="logo"
       />
-      <h1 className="title">The Book Store</h1>
+      <h1 className="title">
+        The Book Store
+        <p className="intro">Welcome to our book store</p>
+      </h1>
+
       <MobileHamburger />
       <nav className="hamnav" id="hamnav">
         <label for="hamburger">&#9776;</label>
