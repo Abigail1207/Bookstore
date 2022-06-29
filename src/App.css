@@ -5,6 +5,41 @@
   border-radius: 5px;
 }
 
+.icon-bar a {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+  margin: 3px;
+  clear: both;
+}
+
+.twitter {
+  display: inline;
+  background: #55acee;
+  color: white;
+  margin: 3px;
+}
+
+.instagram {
+  background: pink;
+  color: white;
+}
+
 h1 {
   margin-top: 0px;
   padding: 30px;
@@ -17,6 +52,7 @@ h1 {
 }
 .App {
   text-align: center;
+  height: 100%;
   background-color: whitesmoke;
 }
 
@@ -213,6 +249,12 @@ li {
   margin-bottom: 20px;
 }
 
+.icon-bar {
+  display: flex;
+  /* position: inherit; */
+  flex-direction: column-reverse;
+  flex-wrap: nowrap;
+}
 .hamnav {
   display: none;
 }
@@ -271,6 +313,12 @@ li {
       "main feature"
       "social social";
   }
+  .icon-bar {
+    display: flex;
+    position: inherit;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   .intro {
     height: 40px;
     margin-bottom: 1px;
@@ -289,10 +337,7 @@ li {
     height: 38px;
     margin-top: 30px;
   }
-  .icon-bar {
-    display: flex;
-    position: inherit;
-  }
+
   .hamnav {
     grid-area: bar;
     display: block;
@@ -352,12 +397,14 @@ li {
 
 /* Style the icon bar links */
 .icon-bar a {
-  display: block;
+  /* display: block; */
   text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* padding: 15px;
+  transition: all 0.5s ease; */
+  /* color: white;
+  font-size: 20px; */
 }
 
 /* Style the social media icons with color, if you want */
@@ -368,14 +415,19 @@ li {
 .facebook {
   background: #3b5998;
   color: white;
+  margin: 1px;
+  clear: both;
 }
 
 .twitter {
+  display: inline;
   background: #55acee;
   color: white;
+  margin: 2px;
 }
 
 .instagram {
   background: pink;
   color: white;
+  margin: 2px;
 }

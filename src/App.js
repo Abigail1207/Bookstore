@@ -36,46 +36,49 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <img
-        className="logo"
-        src="https://upload.wikimedia.org/wikipedia/commons/4/41/Kyobo_Logo.svg"
-        alt="logo"
-      />
-      <h1 className="title">
-        The Book Store
-        <p className="intro">Welcome to our book store</p>
-      </h1>
+    <>
+      <div className="App">
+        <img
+          className="logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/4/41/Kyobo_Logo.svg"
+          alt="logo"
+        />
 
-      <MobileHamburger />
-      <nav className="hamnav" id="hamnav">
-        <label for="hamburger">&#9776;</label>
-        <input type="checkbox" id="hamburger" />
-        <div id="hamitems">
-          <a href="a.html">Home</a>
-          <a href="b.html">Books</a>
-          <a href="c.html">Magazines</a>
-          <a href="d.html">E-books</a>
-          <a href="d.html">Accounts</a>
-        </div>
-      </nav>
-      <FeturedCard books={features} features={[]} />
-      <Card books={books} clickbook={clickbook} features={features} />
+        <h1 className="title">
+          The Book Store
+          <p className="intro">Welcome to our book store</p>
+        </h1>
+
+        <MobileHamburger />
+        <nav className="hamnav" id="hamnav">
+          <label for="hamburger">&#9776;</label>
+          <input type="checkbox" id="hamburger" />
+          <div id="hamitems">
+            <a href="a.html">Home</a>
+            <a href="b.html">Books</a>
+            <a href="c.html">Magazines</a>
+            <a href="d.html">E-books</a>
+            <a href="d.html">Accounts</a>
+          </div>
+        </nav>
+        <FeturedCard books={features} features={[]} />
+        <Card books={books} clickbook={clickbook} features={features} />
+      </div>
       <Socialmedia />
-    </div>
+    </>
   );
 }
 
 function Socialmedia() {
   return (
-    <div>
+    <p>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       />
-      <div class="icon-bar">
+      <p class="icon-bar">
         <a href="#" class="facebook">
-          <i class="fa fa-facebook"></i>
+          <i class="fa fa-facebook-square"></i>
         </a>
         <a href="#" class="twitter">
           <i class="fa fa-twitter"></i>
@@ -83,8 +86,8 @@ function Socialmedia() {
         <a href="#" class="instagram">
           <i class="fa fa-instagram"></i>
         </a>
-      </div>
-    </div>
+      </p>
+    </p>
   );
 }
 function MobileHamburger() {
