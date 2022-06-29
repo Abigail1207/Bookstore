@@ -20,7 +20,6 @@ https://lighthearted-kangaroo-d33b85.netlify.app/
   ##### Dependencies #####
     - react
     - react-dom
-    - react-router-dom
-    - router-dom
+
     
  #### 3. Run `npm start`  ####
