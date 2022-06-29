@@ -2,11 +2,208 @@
   text-align: center;
 }
 
+.cardPages {
+  margin: 10px;
+  padding: 1px;
+}
+.p {
+  margin: 10;
+}
+.bar {
+  display: none;
+}
+
+.logo {
+  display: none;
+}
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 200vh;
+  font-family: "Cabin", Sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  background: black;
+  z-index: -1;
+}
+
+#main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background: #3d0e61;
+  margin: 0px;
+  z-index: 9;
+}
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #b9faf8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Cabin", Sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #3d0e61,
+    #3d0e61 20%,
+    white 20%,
+    white 40%,
+    #3d0e61 40%,
+    #3d0e61 60%,
+    white 60%,
+    white 80%,
+    #3d0e61 80%,
+    #3d0e61 100%
+  );
+}
+
+#hamburger-menu #sidebar-menu {
+  visibilty: hidden;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #3d0e61;
+  transition: 0.3s;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #b9faf8;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #b9faf8;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+}
+#hamburger-input:checked ~ .overlay {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 940px) {
+  #main-menu {
+    display: none;
+  }
+  #hamburger-menu {
+    display: inline;
+  }
+}
+
+Resources .title {
+  border: 10px solid orange;
+  margin-bottom: 3px;
+  margin-top: 70px;
+}
+ul {
+  margin: 1px;
+  height: 30px;
+  padding-bottom: 20px;
+}
+li {
+  list-style-type: none;
+}
+.card {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 15px;
+}
+.null {
+  background-color: #61dafb;
+}
+.is-selected {
+  border: 5px solid skyblue;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+.photo {
+  margin-bottom: 20px;
+}
 
+.hamnav {
+  display: none;
+}
+
+.feturedcard {
+  border: 1px solid black;
+  background-color: yellow;
+  height: 1200px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -28,6 +225,11 @@
   color: #61dafb;
 }
 
+.photo {
+  height: 10px;
+  width: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +237,114 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@media only screen and (min-width: 940px) {
+  .App {
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-gap: 1rem;
+    grid-template-areas:
+      "top top"
+      "bar bar"
+      "main feature"
+      "social social";
+  }
+  .title {
+    grid-area: top;
+  }
+  .logo {
+    grid-area: top;
+    display: block;
+    width: 40px;
+  }
+  .icon-bar {
+    display: flex;
+    position: inherit;
+  }
+  .hamnav {
+    grid-area: bar;
+    display: block;
+    margin: 10px;
+  }
+
+  .feturedcard {
+    grid-area: feature;
+  }
+  .all {
+    display: flex;
+  }
+  .photo {
+    display: none;
+    padding: 0;
+  }
+
+  #hamnav {
+    height: 40px;
+
+    background: white;
+  }
+  #hamitems {
+    display: flex;
+  }
+  #hamitems a {
+    border: 1px solid black;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+  }
+  #hamitems a:hover {
+    background: #af0d0d;
+  }
+
+  #hamnav label,
+  #hamburger {
+    display: none;
+  }
+  #hamburger-menu {
+    display: none;
+  }
+  .two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style-type: none;
+    padding: 0;
+    margin-top: -20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-radius: 10px solid black;
+  }
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+/* Style the social media icons with color, if you want */
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.twitter {
+  background: #55acee;
+  color: white;
+}
+
+.instagram {
+  background: pink;
+  color: white;
 }
