@@ -16,7 +16,7 @@
   font-size: 20px;
 }
 
-/* Style the social media icons with color, if you want */
+/* Style the social media icons with color */
 .icon-bar a:hover {
   background-color: #000;
 }
@@ -251,7 +251,6 @@ li {
 
 .icon-bar {
   display: flex;
-  /* position: inherit; */
   flex-direction: column-reverse;
   flex-wrap: nowrap;
 }
@@ -302,6 +301,7 @@ li {
   }
 }
 
+/* You can see the layout will be converted from mobile frame to desktop frame */
 @media only screen and (min-width: 940px) {
   .App {
     display: grid;
@@ -408,7 +408,7 @@ li {
   font-size: 20px; */
 }
 
-/* Style the social media icons with color, if you want */
+/* Style the social media icons with color */
 .icon-bar a:hover {
   background-color: #000;
 }
