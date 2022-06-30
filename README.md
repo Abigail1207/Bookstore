@@ -1,5 +1,11 @@
 # Books Shop
 This is the Front End part of the Books shop built on top of the Google Books API URL (https://www.googleapis.com/books/v1/volumes?q=HTML5)
+## PreView
+
+
+https://user-images.githubusercontent.com/95905131/176649786-12d7ea3f-de81-46eb-a967-a2a5fe363fb9.mp4
+
+
 ## **Link to hosted News APP** ##
 https://lighthearted-kangaroo-d33b85.netlify.app/
 ## browsers I've tested on
